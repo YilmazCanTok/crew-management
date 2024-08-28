@@ -1,0 +1,52 @@
+<form [formGroup]="crewForm" (ngSubmit)="save()">
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'FIRST_NAME' | translate }}</mat-label>
+    <input matInput formControlName="firstName">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'LAST_NAME' | translate }}</mat-label>
+    <input matInput formControlName="lastName">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'NATIONALITY' | translate }}</mat-label>
+    <input matInput formControlName="nationality">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'TITLE' | translate }}</mat-label>
+    <input matInput formControlName="title">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'DAYS_ON_BOARD' | translate }}</mat-label>
+    <input matInput formControlName="daysOnBoard" type="number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'DAILY_RATE' | translate }}</mat-label>
+    <input matInput formControlName="dailyRate" type="number">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'CURRENCY' | translate }}</mat-label>
+    <mat-select formControlName="currency">
+      <mat-option value="USD">USD</mat-option>
+      <mat-option value="EURO">EURO</mat-option>
+      <mat-option value="TL">TL</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'DISCOUNT' | translate }}</mat-label>
+    <input matInput formControlName="discount" type="number">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>{{ 'TOTAL_INCOME' | translate }}</mat-label>
+    <input matInput formControlName="totalIncome">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">{{ isEditMode ? ('UPDATE' | translate) : ('CREATE' |
+    translate) }}</button>
+  <button mat-button (click)="cancel()">{{ 'CANCEL' | translate }}</button>
+</form>

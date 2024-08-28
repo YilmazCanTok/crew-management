@@ -4,9 +4,10 @@
         <mat-card-subtitle>{{ data.title }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-        <p><strong>Nationality:</strong> {{ data.nationality }}</p>
-        <p><strong>Days On Board:</strong> {{ data.daysOnBoard }}</p>
-        <p><strong>Daily Rate:</strong> {{ data.dailyRate }} {{ data.currency }}</p>
-        <p><strong>Total Income:</strong> {{ data.totalIncome }}</p>
+        <p><strong>{{ 'NATIONALITY' | translate }}:</strong> {{ data.nationality }}</p>
+        <p><strong>{{ 'DAYS_ON_BOARD' | translate }}:</strong> {{ data.daysOnBoard }}</p>
+        <p><strong>{{ 'DAILY_RATE' | translate }}:</strong> {{ data.dailyRate }} {{ data.currency }}</p>
+        <p><strong>{{ 'DISCOUNT' | translate }}:</strong> {{ data.discount }}</p>
+        <p><strong>{{ 'TOTAL_INCOME' | translate }}:</strong> {{ data.totalIncome }}</p>
     </mat-card-content>
 </mat-card>

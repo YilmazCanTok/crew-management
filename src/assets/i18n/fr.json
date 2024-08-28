@@ -1,15 +1,18 @@
 {
-    "FIRST_NAME": "Prénom",
-    "LAST_NAME": "Nom de famille",
-    "NATIONALITY": "Nationalité",
-    "TITLE": "Titre",
-    "DAYS_ON_BOARD": "Jours à Bord",
-    "DAILY_RATE": "Taux Quotidien",
-    "CURRENCY": "Devise",
-    "TOTAL_INCOME": "Revenu Total",
-    "ACTIONS": "Actions",
-    "EDIT": "Éditer",
-    "DELETE": "Supprimer",
-    "ADD_CREW": "Ajouter Équipage"
-  }
-  
+  "EDIT_CREW": "Modifier l'équipage",
+  "FIRST_NAME": "Prénom",
+  "LAST_NAME": "Nom",
+  "NATIONALITY": "Nationalité",
+  "TITLE": "Titre",
+  "DAYS_ON_BOARD": "Jours à bord",
+  "DAILY_RATE": "Tarif journalier",
+  "CURRENCY": "Devise",
+  "TOTAL_INCOME": "Revenu total",
+  "DISCOUNT": "Remise",
+  "CANCEL": "Annuler",
+  "SAVE": "Sauvegarder",
+  "ADD_NEW_CREW": "Ajouter un nouveau",
+  "DELETE_CONFIRMATION": "Êtes-vous sûr de vouloir supprimer cet équipage ?",
+  "CERTIFICATE_NAME" : "Nom Du Certificat",
+  "LINK" : "Lien"
+}

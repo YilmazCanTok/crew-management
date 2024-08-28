@@ -1,10 +1,17 @@
 {
-    "FIRST_NAME": "Nome",
-    "LAST_NAME": "Sobrenome",
-    "NATIONALITY": "Nacionalidade",
-    "TITLE": "Título",
-    "DAYS_ON_BOARD": "Dias a Bordo",
-    "DAILY_RATE": "Taxa Diária",
-    "CURRENCY": "Moeda",
-    "TOTAL_INCOME": "Rendimento Total"
-  }
+  "FIRST_NAME": "Nome",
+  "LAST_NAME": "Sobrenome",
+  "NATIONALITY": "Nacionalidade",
+  "TITLE": "Título",
+  "DAYS_ON_BOARD": "Dias a Bordo",
+  "DAILY_RATE": "Taxa Diária",
+  "CURRENCY": "Moeda",
+  "DISCOUNT": "Desconto",
+  "TOTAL_INCOME": "Renda Total",
+  "SAVE": "Salvar",
+  "CANCEL": "Cancelar",
+  "ADD_NEW_CREW": "Adicionar novo",
+  "DELETE_CONFIRMATION": "Você tem certeza de que deseja excluir esta equipe?",
+  "CERTIFICATE_NAME" : "Nome Do Certificado",
+  "LINK" : "Link"
+}

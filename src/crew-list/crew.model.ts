@@ -1,4 +1,5 @@
 export interface Crew {
+    id: number;
     firstName: string;
     lastName: string;
     nationality: string;
@@ -6,5 +7,6 @@ export interface Crew {
     daysOnBoard: number;
     dailyRate: number;
     currency: string;
+    discount: number;
     totalIncome: number;
 }

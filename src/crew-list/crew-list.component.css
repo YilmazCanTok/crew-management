@@ -5,3 +5,17 @@ table {
 .mat-header-cell {
     font-weight: bold;
 }
+
+.lang-option {
+    width: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: lightblue;
+    margin: 20px;
+    padding: 5px;
+}
+
+.add-button {
+    margin: 20px;
+}

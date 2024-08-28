@@ -1,10 +1,12 @@
-<div>
+<div class="lang-option">
   <mat-select [(value)]="translate.currentLang" (selectionChange)="switchLang($event.value)">
     <mat-option value="en">English</mat-option>
     <mat-option value="pt">Português</mat-option>
     <mat-option value="fr">Français</mat-option>
   </mat-select>
 </div>
+<button class="add-button" mat-raised-button color="primary" type="submit" (click)="openEditPopup()">{{ 'ADD_NEW_CREW' | translate
+  }}</button>
 
 <mat-table [dataSource]="crewList" class="mat-elevation-z8">
 
@@ -43,12 +45,38 @@
     <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.currency }} </mat-cell>
   </ng-container>
 
+  <ng-container matColumnDef="discount">
+    <mat-header-cell *matHeaderCellDef> {{ 'DISCOUNT' | translate }} </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.discount }} </mat-cell>
+  </ng-container>
+
   <ng-container matColumnDef="totalIncome">
     <mat-header-cell *matHeaderCellDef> {{ 'TOTAL_INCOME' | translate }} </mat-header-cell>
     <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.totalIncome }} </mat-cell>
   </ng-container>
 
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef>{{ 'Actions' | translate }}</mat-header-cell>
+    <mat-cell *matCellDef="let crew">
+      <button mat-icon-button (click)="openEditPopup(crew)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button (click)="deleteCrew(crew.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="certificate">
+    <mat-header-cell *matHeaderCellDef>{{ 'Certificates' | translate }}</mat-header-cell>
+    <mat-cell *matCellDef="let crew">
+      <button mat-icon-button (click)="openCertificatePopup(crew.id)">
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openCrewDetail(row)"></mat-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 
 </mat-table>
