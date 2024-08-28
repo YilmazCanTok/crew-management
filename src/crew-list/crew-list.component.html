@@ -6,49 +6,49 @@
   </mat-select>
 </div>
 
-<mat-table [dataSource]="crewList">
+<mat-table [dataSource]="crewList" class="mat-elevation-z8">
 
   <ng-container matColumnDef="firstName">
     <mat-header-cell *matHeaderCellDef> {{ 'FIRST_NAME' | translate }} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.firstName }} </mat-cell>
+    <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.firstName }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="lastName">
     <mat-header-cell *matHeaderCellDef> {{ 'LAST_NAME' | translate }} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.lastName }} </mat-cell>
+    <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.lastName }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="nationality">
     <mat-header-cell *matHeaderCellDef> {{ 'NATIONALITY' | translate }} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.nationality }} </mat-cell>
+    <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.nationality }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="title">
     <mat-header-cell *matHeaderCellDef> {{ 'TITLE' | translate }} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.title }} </mat-cell>
+    <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.title }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="daysOnBoard">
     <mat-header-cell *matHeaderCellDef> {{ 'DAYS_ON_BOARD' | translate }} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.daysOnBoard }} </mat-cell>
+    <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.daysOnBoard }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="dailyRate">
     <mat-header-cell *matHeaderCellDef> {{ 'DAILY_RATE' | translate }} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.dailyRate }} </mat-cell>
+    <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.dailyRate }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="currency">
     <mat-header-cell *matHeaderCellDef> {{ 'CURRENCY' | translate }} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.currency }} </mat-cell>
+    <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.currency }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="totalIncome">
     <mat-header-cell *matHeaderCellDef> {{ 'TOTAL_INCOME' | translate }} </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.totalIncome }} </mat-cell>
+    <mat-cell *matCellDef="let element" (click)="openCrewDetail(element)"> {{ element.totalIncome }} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="openCrewDetail(row)"></mat-row>
 
 </mat-table>
